@@ -81,17 +81,24 @@ function formData() {
 function showData(data)
 {
   console.log(data);
-  
+  let j=0;
   const board=document.querySelector('.board');
   const row=document.createElement('div');
   row.className="row";
   row.className +=" background";
-  for(let i=0;i<=4;i++)
+  for(let i=0;i<4;i++)
   {
       const col = document.createElement('div');
       col.className = 'column';
-      if(i!=4){
-        col.textContent=data[i];
+      if(i!=3){
+          if(i==0){
+            col.textContent = data[j] + " "+data[j+1];
+            j++;
+          }
+          else{
+            col.textContent=data[j];
+          }
+        
       }
       
      // console.log(data[i])
@@ -112,7 +119,7 @@ function showData(data)
         date.textContent = ` ${m} ${day} , ${y} ${h}:${min}:${sec}`;
         col.appendChild(date);
       }
-      if(i==4)
+      if(i==3)
       {
           col.className +=" colButtonStyle";
         //creating +5 -5 and delete buttons
@@ -156,6 +163,7 @@ function showData(data)
         })
       }
       row.appendChild(col);
+      j++;
   }
  // board.innerHTML += row;
   board.appendChild(row)
