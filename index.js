@@ -149,17 +149,17 @@ function showData(data)
         Delete.addEventListener('click',function(){
             board.removeChild(row)
             console.log(row)
-            console.log(row.childNodes[3].textContent)
+            console.log(row.childNodes[2].textContent)
         })
         add5.addEventListener('click',function(){
             console.log(row)
-            row.childNodes[3].textContent =parseInt(row.childNodes[3].textContent) + 5;
-            console.log(row.childNodes[3].textContent)
+            row.childNodes[2].textContent =parseInt(row.childNodes[2].textContent) + 5;
+            console.log(row.childNodes[2].textContent)
         })
         minnus5.addEventListener('click',function(){
             console.log(row)
-            row.childNodes[3].textContent -= 5;
-            console.log(row.childNodes[3].textContent)
+            row.childNodes[2].textContent -= 5;
+            console.log(row.childNodes[2].textContent)
         })
       }
       row.appendChild(col);
