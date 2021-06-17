@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard</title>
+</head>
+<style>
+    body{
+        padding:30px 8%;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        width: 80%;       
+    }
+    header{
+        font-size: 40px;
+        text-align: center;        
+    }
+    .continer{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 20px 0px;
+    }
+    input{
+        padding:10px 6px;
+        border: 1px solid rgba(204, 132, 132, 0.692);
+    }
+    button{
+        padding:10px 20px;
+        border: 1px solid rgba(204, 132, 132, 0.692);
+    }
+    .background{
+      background: rgba(204, 132, 132, 0.692);
+    }
+    .warning{
+        color: red;
+        font-weight: bold;        
+        text-align: center;
+        width: 100%;
+    }
+    .board{
+        width:100%;
+        margin-top: 20px;
+    }
+    .row{        
+        display :table;
+        display: flex;
+        /*align-items: center;*/
+        width: 100%;
+        margin: 10px 0px;
+        padding:10px 0px;        
+    }
+    .column{
+        display: table-cell;
+        width:20%;
+        justify-content: left;
+        padding:0px 10px;
+        align-items: center;
+    }
+    .colButtonStyle{
+        
+    }
+    p{
+        padding: 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        color:grey;
+    }
+    .buttonStyle{
+       border-radius: 100%;
+       padding:10px;
+       background: white;
+       color:rgba(204, 132, 132, 0.692);
+    }
+    .dyanamicButton{
+        display: flex;
+        justify-content: space-evenly;
+        
+    }
+    @media screen and (max-width:500px) {
+        body{
+           padding:30px 3%;
+           width: 90%; 
+        }
+        header{
+        font-size: 20px;        
+       }
+       .continer{
+        flex-wrap: wrap;        
+       }
+       input,button{
+           margin: 10px 0px;
+           width:100%;
+       }
+       .dyanamicButton{       
+        flex-wrap: wrap;
+       }
+       .buttonStyle{
+           width:45px;
+           height:45px;
+       }
+       p{
+           padding-top:10px;
+       }
+    }
+    @media screen and (max-width: 850px) {
+        body{
+            width: 80%;
+            padding:30px 5%;
+        }
+        .continer{
+        flex-wrap: wrap;        
+       }
+       input,button{
+           margin: 10px 0px;
+           width:40%;
+       }
+       .dyanamicButton{
+        display: flex;
+        justify-content: space-evenly;
+        
+       }
+       p{
+           padding-top:5px;
+       }
+        
+    }
+</style>
+<body>
+    <header>Player Leaderboard</header>
+    <div class="continer">
+        
+            <input id="fname" type="text" name="fname" placeholder="First Name">
+            <input id="lname" type="text" name="lname" placeholder="Last Name">
+            <input id="country" type="text" name="country" placeholder="Country">
+            <input id="score"  type="text" name="score" placeholder="Player Score">            
+            <button id="add" class="background" type="submit" onclick="formData()">Add Player</button>
+       
+    </div>
+    <div class="warning"></div>
+    <div class="board ">
+
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
